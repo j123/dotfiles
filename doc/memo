@@ -1,0 +1,77 @@
+## Terminal
+
+* テーマを変える  
+SolarizedをZipダウンロードした
+https://github.com/tomislav/osx-terminal.app-colors-solarized
+
+* フォントを変える  
+Programing FontをZipダウンロードした
+https://github.com/edihbrandon/RictyDiminished
+
+* 背景  
+不透明度を90％にした
+
+* Env  
+環境変数、エイリアス、プロンプトの設定など  
+.bashrc  
+```
+alias ls='ls -G'
+alias ll='ls -laG'
+PS1='\[\e[34m\]\w \[\e[37m\]\$\[\e[0m\] '
+```
+.bash_profile
+```
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+```
+
+## Homebrew
+
+* Command Line Tools for Xcodeのインストール  
+`xcode-select --install`
+
+* Homebrewのインストール  
+https://brew.sh/index_ja.html からコマンドをコピペ  
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+## Node.js
+
+* nodebrew(0.9.x)  
+(参考)https://github.com/hokaccha/nodebrew  
+`curl -L git.io/nodebrew | perl - setup`  
+確認  
+`~/.nodebrew/nodebrew -v`  
+※brewでインストールするとnodebrewのバージョンが古く(0.8.x)、nodeのインストールに失敗する  
+
+* node(最新)  
+`~/.nodebrew/nodebrew install-binary latest`  
+確認  
+`~/.nodebrew/nodebrew ls`  
+使用  
+`nodebrew use v8.4.0`  
+
+* パスを通す  
+`echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile`  
+
+## Atom
+
+* [Download For Mac]からダウンロード  
+https://atom.io/
+
+## Git
+
+* gitインストール  
+`brew install git`
+
+* github ssh  
+  * 鍵生成  
+`ssh-keygen -t rsa`
+  * 鍵コピー  
+  `pbcopy < ~/.ssh/id_rsa.pub`
+  * 鍵登録  
+  https://github.com/settings/ssh
+  * 接続テスト  
+  `ssh -T git@github.com`
+
+* 
