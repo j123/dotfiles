@@ -12,7 +12,7 @@ alias gcb='git checkout -b'
 alias gs='git status'
 alias gl='git log'
 alias ga='git add'
-alias gc='git commit'
+alias gcm='git commit -m'
 
 # プロンプトの設定
 PS1='\[\e[34m\]\w \[\e[37m\]\$\[\e[0m\] '
